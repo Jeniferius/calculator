@@ -63,6 +63,12 @@
       case "minus":
         resultNum = oldNum - theNum;
         break;
+      case "multiply":
+        resultNum = oldNum * theNum;
+        break;
+      case "division":
+        resultNum = oldNum / theNum;
+        break;
 
         // If equal is pressed without an operator, keep number and continue
       default:
