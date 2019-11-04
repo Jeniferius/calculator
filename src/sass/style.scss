@@ -14,16 +14,25 @@ header#pv_header {
   background-color: $pv_green;
   text-align: center;
   padding: 2em;
+  @media screen and (max-width: $break-small) {
+    padding: 1em;
+  }
   h2#calculatorTitle {
     font-size: 40px;
     font-weight: 400;
     font-family: "Source Sans Pro", sans-serif;
     color: $pv_white;
+    @media screen and (max-width: $break-small) {
+      font-size: 30px;
+    }
   }
 }
 
 main#pv_main {
   padding-top: 3em;
+  @media screen and (max-width: $break-small) {
+    padding-top: 1.8em;
+  }
   #calculatorContainer {
     display: flex;
     flex-flow: column nowrap;
@@ -36,6 +45,10 @@ main#pv_main {
     background-color: $pv_green;
     #pv_logo {
       width: 8em;
+      @media screen and (max-width: $break-small) {
+        width: 5em;
+        margin-bottom: 0.6em;
+      }
     }
     #calculatorHeader {
       margin-bottom: 1em;
@@ -88,6 +101,11 @@ main#pv_main {
       }
       &:hover {
         border: 2px solid $pv_red;
+      }
+      @media screen and (max-width: $break-small) {
+        font-size: 30px;
+        width: 1.8em;
+        height: 1.8em;
       }
     }
     .btnNumber {

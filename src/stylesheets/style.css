@@ -11,14 +11,23 @@ header#pv_header {
   background-color: #007364;
   text-align: center;
   padding: 2em; }
+  @media screen and (max-width: 480px) {
+    header#pv_header {
+      padding: 1em; } }
   header#pv_header h2#calculatorTitle {
     font-size: 40px;
     font-weight: 400;
     font-family: "Source Sans Pro", sans-serif;
     color: #fff; }
+    @media screen and (max-width: 480px) {
+      header#pv_header h2#calculatorTitle {
+        font-size: 30px; } }
 
 main#pv_main {
   padding-top: 3em; }
+  @media screen and (max-width: 480px) {
+    main#pv_main {
+      padding-top: 1.8em; } }
   main#pv_main #calculatorContainer {
     display: flex;
     flex-flow: column nowrap;
@@ -31,6 +40,10 @@ main#pv_main {
     background-color: #007364; }
     main#pv_main #calculatorContainer #pv_logo {
       width: 8em; }
+      @media screen and (max-width: 480px) {
+        main#pv_main #calculatorContainer #pv_logo {
+          width: 5em;
+          margin-bottom: 0.6em; } }
     main#pv_main #calculatorContainer #calculatorHeader {
       margin-bottom: 1em;
       display: flex;
@@ -76,6 +89,11 @@ main#pv_main {
         outline: none; }
       main#pv_main #calculatorContainer .calculatorBtn:hover {
         border: 2px solid #be3c50; }
+      @media screen and (max-width: 480px) {
+        main#pv_main #calculatorContainer .calculatorBtn {
+          font-size: 30px;
+          width: 1.8em;
+          height: 1.8em; } }
     main#pv_main #calculatorContainer .btnNumber {
       background-color: #ff7d6e; }
 
