@@ -70,8 +70,7 @@
         resultNum = "You broke it!";
       } else {
         // If result is infinity, set off by dividing by zero
-        resultNum = "Look at what you've done";
-        el("#calculator").classList.add("broken"); // Break calculator
+        resultNum = "Broken";
       }
     }
 
