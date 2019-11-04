@@ -19,7 +19,13 @@
     resultNum, // Result
     operator; // Batman
 
-  // When: Number is clicked. Get the current number selected
+  let maxLength = function(number, maxLength) {
+      if (number.length > maxLength) {
+        number = number.substring(0, maxLength);
+      }
+      return number;
+    }
+    // When: Number is clicked. Get the current number selected
   var setNum = function() {
     if (resultNum) {
       // If a result was displayed, reset number
@@ -27,9 +33,9 @@
       resultNum = "";
     } else {
       // Otherwise, add digit to previous number (this is a string!)
+      theNum = maxLength(theNum, 15);
       theNum += this.getAttribute("data-num");
     }
-
     viewer.innerHTML = theNum; // Display current number
   };
 
@@ -63,6 +69,10 @@
         resultNum = theNum;
     }
 
+    // If result is too long
+    if (resultNum.toString().length > 15) {
+      resultNum = "Too long";
+    }
     // If NaN or Infinity returned
     if (!isFinite(resultNum)) {
       if (isNaN(resultNum)) {
