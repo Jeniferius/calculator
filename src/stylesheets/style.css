@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #c8ffe1;
+  padding-top: 2em; }
+
+header#pv_header {
+  background-color: #007364;
+  text-align: center;
+  padding: 2em; }
+  header#pv_header h2#calculatorTitle {
+    font-size: 40px;
+    font-weight: 400;
+    font-family: "Source Sans Pro", sans-serif;
+    color: #fff; }
+
+main#pv_main {
+  padding-top: 3em; }
+  main#pv_main #calculatorContainer {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    border: 2px solid #ff7d6e;
+    border-radius: 8%;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1em 1.5em 2em;
+    background-color: #007364; }
+    main#pv_main #calculatorContainer #pv_logo {
+      width: 8em; }
+    main#pv_main #calculatorContainer #calculatorHeader {
+      margin-bottom: 1em;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      width: 100%; }
+      main#pv_main #calculatorContainer #calculatorHeader #btnClear {
+        background-color: #f2f2e9;
+        color: #ff7d6e;
+        font-weight: 600;
+        border: none;
+        border-radius: 6%;
+        font-size: 26px;
+        width: 2em;
+        height: 1.8em;
+        margin: 0.2em; }
+        main#pv_main #calculatorContainer #calculatorHeader #btnClear:focus {
+          outline: none; }
+        main#pv_main #calculatorContainer #calculatorHeader #btnClear:hover {
+          background-color: #dcdce0; }
+      main#pv_main #calculatorContainer #calculatorHeader #calculateViewer {
+        color: #f2f2e9;
+        border: 1px solid #ff7d6e;
+        font-size: 26px;
+        width: 100%;
+        padding: 0.4em;
+        margin: 0.2em;
+        text-align: right;
+        vertical-align: middle; }
+    main#pv_main #calculatorContainer .calculatorBtn {
+      border: 1px solid #ff7d6e;
+      border-radius: 8%;
+      background-color: #ffc882;
+      color: #465a64;
+      font-weight: 400;
+      font-size: 34px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      margin: 0.1em;
+      width: 2em;
+      height: 2em;
+      cursor: pointer; }
+      main#pv_main #calculatorContainer .calculatorBtn:focus {
+        outline: none; }
+      main#pv_main #calculatorContainer .calculatorBtn:hover {
+        border: 2px solid #be3c50; }
+    main#pv_main #calculatorContainer .btnNumber {
+      background-color: #ff7d6e; }
+
+/*# sourceMappingURL=style.css.map */

@@ -10,10 +10,10 @@
   };
 
   // Variables
-  var viewer = el("#viewer"), // Calculator screen where result is displayed
-    equals = el("#equals"), // Equal button
-    nums = el(".num"), // List of numbers
-    ops = el(".ops"), // List of operators
+  var viewer = el("#calculateViewer"), // Calculator screen where result is displayed
+    equals = el("#btnEquals"), // Equal button
+    nums = el(".btnNumber"), // List of numbers
+    ops = el(".btnOperation"), // List of operators
     theNum = "", // Current number
     oldNum = "", // First number
     resultNum, // Result
@@ -108,5 +108,5 @@
   equals.onclick = displayNum;
 
   // Add click event to clear button
-  el("#clear").onclick = clearAll;
+  el("#btnClear").onclick = clearAll;
 })();

@@ -1,27 +1,52 @@
-<link rel="stylesheet" href="./style.sass">
-<h2>Payvision Calculator</h2>
+<!DOCTYPE html>
+<html lang="en">
 
-<div id="calculator" class="calculator">
-  <button id="clear" class="clear">C</button>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Payvision Calculator</title>
+  <link rel="stylesheet" href="./stylesheets/style.css">
+</head>
 
-  <div id="viewer" class="viewer">0</div>
+<body>
+  <header id="pv_header">
+    <h2 id="calculatorTitle">Payvision Calculator</h2>
+  </header>
+  <main id="pv_main">
+    <div id="calculatorContainer">
+      <img id="pv_logo" src="./image/pv.png" alt="PV Logo">
+      <div id="calculatorHeader">
+        <button id="btnClear">C</button>
+        <div id="calculateViewer">0</div>
+      </div>
+      <div class="calculatorButtonsFirstLine">
+        <button class="calculatorBtn btnNumber" data-num="7">7</button>
+        <button class="calculatorBtn btnNumber" data-num="8">8</button>
+        <button class="calculatorBtn btnNumber" data-num="9">9</button>
+        <button data-ops="division" class="calculatorBtn btnOperation">/</button>
+      </div>
+      <div class="calculatorButtonsSecondLine">
+        <button class="calculatorBtn btnNumber" data-num="4">4</button>
+        <button class="calculatorBtn btnNumber" data-num="5">5</button>
+        <button class="calculatorBtn btnNumber" data-num="6">6</button>
+        <button data-ops="multiply" class="calculatorBtn btnOperation">*</button>
+      </div>
+      <div class="calculatorButtonsThirdLine">
+        <button class="calculatorBtn btnNumber" data-num="1">1</button>
+        <button class="calculatorBtn btnNumber" data-num="2">2</button>
+        <button class="calculatorBtn btnNumber" data-num="3">3</button>
+        <button data-ops="minus" class="calculatorBtn btnOperation">-</button>
+      </div>
+      <div class="calculatorButtonsFourthLine">
+        <button class="calculatorBtn btnSimbol" data-num=".">.</button>
+        <button class="calculatorBtn btnNumber" data-num="0">0</button>
+        <button class="calculatorBtn btnEquals" id="btnEquals" data-result="">=</button>
+        <button data-ops="plus" class="calculatorBtn btnOperation">+</button>
+      </div>
+    </div>
+  </main>
+  <script src="./scripts/app.js"></script>
+</body>
 
-  <button id="btn" class="num" data-num="9">9</button>
-  <button id="btn" class="num" data-num="8">8</button>
-  <button id="btn" class="num" data-num="7">7</button>
-  <button data-ops="plus" class="ops">+</button>
-
-  <button id="btn" class="num" data-num="4">4</button>
-  <button id="btn" class="num" data-num="5">5</button>
-  <button id="btn" class="num" data-num="6">6</button>
-  <button data-ops="minus" class="ops">-</button>
-
-  <button id="btn" class="num" data-num="3">0</button>
-  <button id="btn" class="num" data-num="1">1</button>
-  <button id="btn" class="num" data-num="2">2</button>
-
-  <button id="btn" class="num" data-num="0">3</button>
-  <button id="btn" class="num" data-num=".">.</button>
-  <button id="equals" class="equals" data-result="">=</button>
-</div>
-<script src="./app.js"></script>
+</html>
