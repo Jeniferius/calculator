@@ -59,7 +59,6 @@
       case "plus":
         resultNum = oldNum + theNum;
         break;
-
       case "minus":
         resultNum = oldNum - theNum;
         break;
@@ -76,9 +75,6 @@
     }
 
     // If result is too long
-    if (resultNum.toString().length > 15) {
-      resultNum = "Too long";
-    }
     // If NaN or Infinity returned
     if (!isFinite(resultNum)) {
       if (isNaN(resultNum)) {
@@ -87,6 +83,13 @@
       } else {
         // If result is infinity, set off by dividing by zero
         resultNum = "Broken";
+      }
+    }
+    if (resultNum.toString().length > 15) {
+      if (resultNum.toString().indexOf('.') != -1) {
+        resultNum = maxLength(resultNum.toString(), 15)
+      } else {
+        resultNum = "Too long";
       }
     }
 
