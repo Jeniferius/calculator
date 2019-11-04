@@ -51,11 +51,11 @@
     // Perform operation
     switch (operator) {
       case "plus":
-        resultNum = oldNum - theNum;
+        resultNum = oldNum + theNum;
         break;
 
       case "minus":
-        resultNum = oldNum + theNum;
+        resultNum = oldNum - theNum;
         break;
 
         // If equal is pressed without an operator, keep number and continue
