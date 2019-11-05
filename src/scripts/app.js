@@ -127,4 +127,48 @@
 
   // Add click event to clear button
   el("#btnClear").onclick = clearAll;
+
+  /* The key events */
+
+  function onKeyDown(event) {
+    let e = event || window.event;
+    let keyCode = e.key;
+    console.log(keyCode);
+
+    if ((keyCode >= "0" && keyCode <= "9") || keyCode === ".") {
+      for (let i = 0; i < nums.length; i++) {
+        if (nums[i].getAttribute("data-num") === keyCode) {
+          nums[i].click();
+          break;
+        }
+      }
+    } else {
+      switch (keyCode) {
+        case "+":
+          operator = "plus";
+          ops[3].click();
+          break;
+        case "-":
+          operator = "minus";
+          ops[2].click();
+          break;
+        case "*":
+          operator = "multiply";
+          ops[1].click();
+          break;
+        case "/":
+          operator = "division";
+          ops[0].click();
+          break;
+        case "Enter":
+          equals.click();
+          break;
+        case "c" || "C":
+          el("#btnClear").click();
+          break;
+      }
+    }
+  }
+
+  el("#body").onkeydown = onKeyDown;
 })();
